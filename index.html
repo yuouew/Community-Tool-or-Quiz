@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Storage Quiz</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+<div class="quiz-container">
+    <h2>Local Storage Quiz</h2>
+    <form id="quiz-form">
+        <div>
+            <p>1. What is local storage used for in web development?</p>
+            <label><input type="radio" name="q1" value="a"> a) Storing data on the server</label><br>
+            <label><input type="radio" name="q1" value="b"> b) Storing data locally in the user's browser</label><br>
+            <label><input type="radio" name="q1" value="c"> c) Storing data in cookies</label><br>
+            <label><input type="radio" name="q1" value="d"> d) None of the above</label><br>
+        </div>
+        <!-- Add more questions similarly -->
+        <div>
+            <p>2. How do you store data using local storage in JavaScript?</p>
+            <label><input type="radio" name="q2" value="a"> a) localStorage.saveItem(key, value)</label><br>
+            <label><input type="radio" name="q2" value="b"> b) localStorage.store(key, value)</label><br>
+            <label><input type="radio" name="q2" value="c"> c) localStorage.setItem(key, value)</label><br>
+            <label><input type="radio" name="q2" value="d"> d) localStorage.storeData(key, value)</label><br>
+        </div>
+        
+        <div>
+            <p>3. What method do you use to retrieve data from local storage?</p>
+            <label><input type="radio" name="q3" value="a"> a) localStorage.getItem(key)</label><br>
+            <label><input type="radio" name="q3" value="b"> b) localStorage.retrieve(key)</label><br>
+            <label><input type="radio" name="q3" value="c"> c) localStorage.getData(key)</label><br>
+            <label><input type="radio" name="q3" value="d"> d) localStorage.fetchItem(key)</label><br>
+        </div>
+        
+        <div>
+            <p>4. How do you remove specific data from local storage?</p>
+            <label><input type="radio" name="q4" value="a"> a) localStorage.clearItem(key)</label><br>
+            <label><input type="radio" name="q4" value="b"> b) localStorage.delete(key)</label><br>
+            <label><input type="radio" name="q4" value="c"> c) localStorage.removeItem(key)</label><br>
+            <label><input type="radio" name="q4" value="d"> d) localStorage.erase(key)</label><br>
+        </div>
+        
+        <div>
+            <p>5. How long does data stored in local storage persist?</p>
+            <label><input type="radio" name="q5" value="a"> a) Until the end of the current browser session</label><br>
+            <label><input type="radio" name="q5" value="b"> b) Until the user clears their browser cache</label><br>
+            <label><input type="radio" name="q5" value="c"> c) Until the user explicitly deletes it or clears local storage</label><br>
+            <label><input type="radio" name="q5" value="d"> d) Data in local storage does not persist</label><br>
+        </div>
+        
+        <div>
+            <p>6. What data type does local storage support natively?</p>
+            <label><input type="radio" name="q6" value="a"> a) Strings only</label><br>
+            <label><input type="radio" name="q6" value="b"> b) Numbers only</label><br>
+            <label><input type="radio" name="q6" value="c"> c) Objects only</label><br>
+            <label><input type="radio" name="q6" value="d"> d) Strings, numbers, booleans, and objects</label><br>
+        </div>
+        
+        <div>
+            <p>7. Is there a limit to the amount of data you can store in local storage?</p>
+            <label><input type="radio" name="q7" value="a"> a) Yes, limited to 1MB</label><br>
+            <label><input type="radio" name="q7" value="b"> b) Yes, limited to 5MB</label><br>
+            <label><input type="radio" name="q7" value="c"> c) No, there's no limit</label><br>
+            <label><input type="radio" name="q7" value="d"> d) Yes, but it varies by browser and is typically around 5-10MB</label><br>
+        </div>
+        
+        <div>
+            <p>8. Imagine you have a form where users enter their name. How would you remember their name even after they close the browser?</p>
+            <label><input type="radio" name="q8" value="a"> a) Store the name in a cookie</label><br>
+            <label><input type="radio" name="q8" value="b"> b) Use local storage to store the name when the form is submitted, and retrieve it when the page loads</label><br>
+            <label><input type="radio" name="q8" value="c"> c) Use session storage instead of local storage</label><br>
+            <label><input type="radio" name="q8" value="d"> d) Ask the user to enter their name every time they visit the page</label><br>
+        </div>
+        
+        <br><button type="submit">Submit Quiz</button>
+
+    <div id="quiz-results" style="display: none;">
+        <h3>Incorrect Quiz Results</h3>
+        <ul id="incorrect-results"></ul>
+        <!-- <h3>Correct Quiz Results</h3> -->
+        <ul id="correct-results"></ul>
+    </div>
+
+    <button type="button" id="retry-btn" style="display: none;">Retry Quiz</button> <!-- Retry button initially hidden -->
+</form>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
